@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/notes/logout/">Log Out</a>
+<h2> Dashboard {{ user }}</h2>
+
+<form name="notesUpdateForm" method="post" action="/notes/dashboard/"> {% csrf_token %}
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form.id }}
+        {{ form.title }}
+        {{ form.text }}
+        {{ form.createTime }}
+        {{form.DELETE}}
+    {% endfor %}
+    <input type="submit" value="Update">
+</form>
+{% endblock %}
+
+<!-- <form action="{% url upload_pic %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+    <p>
+        <input id="id_image" type="file" class="" name="image">
+    </p>
+        <input type="submit" value="Submit" />
+</form> -->
+
+<!-- Old code below -->
+<!-- <table>
+    <tr>
+        <td>
+            <form name="noteForm" action="/notes/dashboard/" method="port"> {% csrf_token %}{{form.as_p}}
+                <input type="submit" value="New Note"/>
+            </form>
+        </td> -->
+        <!--<tb>&nbsp;&nbsp;&nbsp;</td>
+        <td>
+            {% if not notes %}
+                You have no notes
+            {% else %}
+                <table border="1">
+                {% for note in notes %}
+                <tr>
+                    <td> {{ note.title }}</td>
+                    <td> {{ note.text }}</td>
+                    <td><a href="/notes/editnote/?id={{ note.id }}">Edit</a></td>
+                    {% endfor %}
+                </tr>
+                </table>
+            {% endif %}
+        </td>-->
+<!--     </tr>
+</table> -->

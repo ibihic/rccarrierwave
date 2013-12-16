@@ -1,0 +1,18 @@
+def square_return(num):
+    return num**2
+
+def square_print(num):
+    print("ther square of num is", numm**2)
+
+    
+def convert_to_minutes(num_hours):
+    '''(int)->int
+
+    return the number of minutes there are in number hours.
+
+    >>>convert_to_minutes(2)
+    120
+    '''
+
+    result = num_hours * 60
+    return result

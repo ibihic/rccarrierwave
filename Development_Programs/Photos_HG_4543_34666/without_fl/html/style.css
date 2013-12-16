@@ -1,0 +1,38 @@
+body, td, th {
+	margin: 0px;
+	padding: 0px;
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	 }
+form {
+	margin: 0px;
+	padding: 0px }
+a {
+	color: #FFFFFF;
+	text-decoration: none }
+a:hover {
+	text-decoration: underline }
+a.under {
+	text-decoration: underline }
+a.under:hover {
+	text-decoration: none }
+.t100 {
+	height: 100% }
+.t-gray {
+	color: #C6C9D6 }
+.t-hing {
+	color: #9BA8B4 }
+.t-copy {
+	color: #7D8D9C }
+.f {
+	width: 122px;
+	height: 16px;
+	font-family: Tahome, sans-serif;
+	font-size: 10px;
+	color: #1A2D7D;
+	border-bottom: 2px inset #FFFFFF;
+	border-left: 2px inset #808080;
+	border-right: 2px inset #FFFFFF;
+	border-top: 2px inset #808080;
+	padding-left: 3px }

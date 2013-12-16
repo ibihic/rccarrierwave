@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gallery.name %>
+  <% @gallery.paintings.each do |painting| %>
+  <%= image_tag painting.image_url(:thumb).to_s %>
+  <% end %>
+</p>
+
+<%= link_to 'Add a painting', new_painting_path(gallery_id: @gallery) %>
+<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
+<%= link_to 'Back', galleries_path %>
